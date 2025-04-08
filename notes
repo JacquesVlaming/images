@@ -1,0 +1,28 @@
+  739  kubectl get opentelemetrycollectors.opentelemetry.io -n opentelemetry-operator-system\n
+  740  kubectl patch opentelemetrycollectors.opentelemetry.io opentelemetry-kube-stack-cluster-stats -n opentelemetry-operator-system -p '{"metadata":{"finalizers":null}}' --type=merge
+  741  kubectl patch opentelemetrycollectors.opentelemetry.io opentelemetry-kube-stack-daemon -n opentelemetry-operator-system -p '{"metadata":{"finalizers":null}}' --type=merge
+  742  kubectl get opentelemetrycollectors.opentelemetry.io -n opentelemetry-operator-system\n
+  743  kubectl delete namespace opentelemetry-operator-system
+
+
+kubectl expose pod frontend --type=LoadBalancer --name=frontend-service --port=9000 --target-port=9000 -n elastiflix
+
+
+Github
+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
+
+
+echo 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 | docker login ghcr.io -u JacquesVlaming --password-stdin
+jacquesvlaming@Jacques’s-MacBook-Pro javascript-client % docker push ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest
+
+
+docker build -t ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest .
+docker push elastiflix-javascript-client:latest
+
+kubectl delete -f . -n elastiflix
+kubectl apply -f . -n elastiflix
+
+
+docker buildx build --platform linux/amd64 -t ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest .
+
+
