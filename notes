@@ -12,7 +12,7 @@ Github
 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
 
 
-echo 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 | docker login ghcr.io -u JacquesVlaming --password-stdin
+echo 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 | docker login ghcr.io -u JacquesVlaming --password-stdin
 jacquesvlaming@Jacques’s-MacBook-Pro javascript-client % docker push ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest
 
 

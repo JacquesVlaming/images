@@ -8,7 +8,7 @@ RUN yarn build
 FROM nginx:1.25.1-alpine
 RUN apk --no-cache add curl
 COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 # Copy .env file and shell script to container
 WORKDIR /usr/share/nginx/html
 COPY --from=build-deps /usr/src/app/scripts ./
