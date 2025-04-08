@@ -12,12 +12,12 @@ Github
 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
 
 
-echo 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 | docker login ghcr.io -u JacquesVlaming --password-stdin
+echo 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 | docker login ghcr.io -u JacquesVlaming --password-stdin
 jacquesvlaming@Jacques’s-MacBook-Pro javascript-client % docker push ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest
 
 
 docker build -t ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest .
-docker push elastiflix-javascript-client:latest
+docker push ghcr.io/jacquesvlaming/images/elastiflix-javascript-client:latest
 
 kubectl delete -f . -n elastiflix
 kubectl apply -f . -n elastiflix
