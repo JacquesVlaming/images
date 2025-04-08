@@ -153,7 +153,8 @@ public final class AdService {
       // get the current span in context
       Span span = Span.current();
       try {
-        List<Ad> allAds = new ArrayList<>();
+//         List<Ad> allAds = new ArrayList<>();
+        List<Ad> allAds = null;
         AdRequestType adRequestType;
         AdResponseType adResponseType;
 
